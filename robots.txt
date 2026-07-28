@@ -4,5 +4,6 @@ Disallow: /wp-admin/
 Disallow: /wp-includes/
 Disallow: /wp-json/
 Disallow: /xmlrpc.php
+Disallow: /go/
 
 Sitemap: https://talk-to-psychic-free.com/sitemap.xml
