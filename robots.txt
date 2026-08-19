@@ -7,4 +7,3 @@ Disallow: /xmlrpc.php
 Disallow: /go/
 
 Sitemap: https://talk-to-psychic-free.com/sitemap.xml
-Sitemap: https://pl.talk-to-psychic-free.com/sitemap.xml
