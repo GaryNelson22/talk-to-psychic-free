@@ -1,0 +1,22 @@
+/*
+Theme Name: Talk to Psychic Free Theme
+Theme URI: https://talk-to-psychic-free.com
+Author: Celestial Sanctuary
+Description: Dark celestial theme with Tailwind CSS for Talk to Psychic Free
+Version: 2.0.0
+Text Domain: talk-to-psychic-freecom-theme
+Requires at least: 6.0
+Requires PHP: 8.0
+*/
+
+/* Tailwind CDN handles all styling. This file is required by WordPress for theme identification only. */
+
+/* Декоративне сяйво не повинно розширювати мобільну сторінку. */
+.site-main > .blur-glow {
+    max-width: 75%;
+}
+
+/* Золотий CTA зберігає читабельний текст і в польській локалізації. */
+a.bg-secondary.text-on-secondary {
+    color: #3c2f00 !important;
+}
