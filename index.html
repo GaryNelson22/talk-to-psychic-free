@@ -9,228 +9,119 @@
 <meta content="max-image-preview:large" name="robots">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
-
       tailwind.config = {
-
         darkMode: "class",
-
         theme: {
-
           extend: {
-
             colors: {
-
               "primary": "#e4b5ff",
-
               "primary-container": "#50007a",
-
               "primary-fixed": "#f4d9ff",
-
               "primary-fixed-dim": "#e4b5ff",
-
               "on-primary": "#4e0078",
-
               "on-primary-container": "#c578f5",
-
               "on-primary-fixed": "#2f004b",
-
               "on-primary-fixed-variant": "#6a1b9a",
-
               "secondary": "#e9c349",
-
               "secondary-container": "#af8d11",
-
               "secondary-fixed": "#ffe088",
-
               "secondary-fixed-dim": "#e9c349",
-
               "on-secondary": "#3c2f00",
-
               "on-secondary-container": "#342800",
-
               "on-secondary-fixed": "#241a00",
-
               "on-secondary-fixed-variant": "#574500",
-
               "tertiary": "#a8c9f6",
-
               "tertiary-container": "#0a3358",
-
               "tertiary-fixed": "#d2e4ff",
-
               "tertiary-fixed-dim": "#a8c9f6",
-
               "on-tertiary": "#083257",
-
               "on-tertiary-container": "#7b9cc7",
-
               "on-tertiary-fixed": "#001c37",
-
               "on-tertiary-fixed-variant": "#26486f",
-
               "background": "#151120",
-
               "surface": "#151120",
-
               "surface-dim": "#151120",
-
               "surface-bright": "#3b3747",
-
               "surface-container-lowest": "#100c1a",
-
               "surface-container-low": "#1d1928",
-
               "surface-container": "#211d2d",
-
               "surface-container-high": "#2c2837",
-
               "surface-container-highest": "#373243",
-
               "surface-variant": "#373243",
-
               "surface-tint": "#e4b5ff",
-
               "on-surface": "#e7dff5",
-
               "on-surface-variant": "#cec3d3",
-
               "on-background": "#e7dff5",
-
               "outline": "#978d9d",
-
               "outline-variant": "#4c4451",
-
               "inverse-surface": "#e7dff5",
-
               "inverse-on-surface": "#322e3e",
-
               "inverse-primary": "#843ab4",
-
               "error": "#ffb4ab",
-
               "error-container": "#93000a",
-
               "on-error": "#690005",
-
               "on-error-container": "#ffdad6"
-
             },
-
             fontFamily: {
-
               "headline": ["Noto Serif", "serif"],
-
               "body": ["Manrope", "sans-serif"],
-
               "label": ["Manrope", "sans-serif"]
-
             },
-
             borderRadius: {
-
               "DEFAULT": "0.25rem",
-
               "lg": "0.5rem",
-
               "xl": "0.75rem",
-
               "full": "9999px"
-
             },
-
           },
-
         },
-
       }
-
     </script>
 <style>
-
       .material-symbols-outlined {
-
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-
       }
-
       .glass-effect {
-
         backdrop-filter: blur(20px);
-
         -webkit-backdrop-filter: blur(20px);
-
       }
-
       .blur-glow {
-
         filter: blur(80px);
-
         opacity: 0.15;
-
       }
-
+      /* ttpsf-nav-fit: five menu items must not wrap at 1024-1279 px */
+      #site-navigation a { white-space: nowrap; }
+      @media (min-width: 1024px) and (max-width: 1279px) { #site-navigation ul { gap: 1.1rem; } #site-navigation a { font-size: .92rem; } }
       /* WP admin bar fix: the sticky header sits below the fixed admin bar, so nudge it down
-
          by the admin bar's own height instead of assuming any `.fixed` element is the header. */
-
       .admin-bar #masthead { top: 32px; }
-
       @media screen and (max-width: 782px) {
-
         .admin-bar #masthead { top: 46px; }
-
       }
-
       /* Any remaining truly-fixed elements (e.g. the mobile bottom nav in footer.php) still need
-
          the original bar offset when relevant; harmless no-op for elements without `top`. */
-
       .admin-bar .fixed:not(#masthead) { top: 32px; }
-
       @media screen and (max-width: 782px) {
-
         .admin-bar .fixed:not(#masthead) { top: 46px; }
-
       }
-
       /* Sticky-header clearance for in-page anchor scrolling (header now reserves its own
-
          layout space, but anchors still want breathing room above the fixed admin bar). */
-
       html { scroll-padding-top: 24px; }
-
       /* Theme-owned CTA button styling - immune to stray Customizer "Additional CSS" rules
-
          that blanket-target `a` elements (e.g. a leftover FSE design's link-color rule). */
-
       .ttpsf-cta-btn.ttpsf-cta-gold { color: #1a1a1a !important; text-decoration: none !important; }
-
       .ttpsf-cta-btn.ttpsf-cta-gradient { color: #ffffff !important; text-decoration: none !important; }
-
       /* WP content styling in dark theme */
-
       .entry-content a { color: #e4b5ff; text-decoration: underline; }
-
       .entry-content a:hover { color: #e9c349; }
-
       .entry-content ul, .entry-content ol { padding-left: 1.5rem; margin-bottom: 1rem; }
-
       .entry-content li { margin-bottom: 0.5rem; }
-
       .entry-content blockquote { border-left: 4px solid #e9c349; padding-left: 1rem; margin: 1.5rem 0; color: #cec3d3; font-style: italic; }
-
       .entry-content img { border-radius: 0.75rem; max-width: 100%; height: auto; }
-
       .entry-content h2, .entry-content h3, .entry-content h4 { font-family: 'Noto Serif', serif; color: #e7dff5; margin-top: 2rem; margin-bottom: 1rem; }
-
       .entry-content p { margin-bottom: 1rem; line-height: 1.8; }
-
     </style>
 <link href="//fonts.googleapis.com" rel="dns-prefetch">
-<link href="https://talk-to-psychic-free.com/feed/" rel="alternate" title="Talk to Psychic Free » Feed" type="application/rss+xml"/>
-<link href="https://talk-to-psychic-free.com/comments/feed/" rel="alternate" title="Talk to Psychic Free » Comments Feed" type="application/rss+xml"/>
-<link href="https://talk-to-psychic-free.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftalk-to-psychic-free.com%2F" rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"/>
-<link href="https://talk-to-psychic-free.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftalk-to-psychic-free.com%2F&amp;format=xml" rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"/>
 <!-- SEO patch (WP-Net-Control) -->
 <meta content="Talk to a real psychic for free — live conversations, zero payment required. Verified readers, transparent ratings. Real psychic guidance, available 24/7." name="description">
 <meta content="website" property="og:type"/>
@@ -278,13 +169,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 :root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
 /*# sourceURL=global-styles-inline-css */
 </style>
-<link href="https://talk-to-psychic-free.com/wp-content/themes/talk-to-psychic-freecom-theme/style.css?ver=2.0.0" id="ttpsf-style-css" media="all" rel="stylesheet"/>
+<link href="https://talk-to-psychic-free.com/wp-content/themes/talk-to-psychic-freecom-theme/style.css?ver=2.1.0" id="ttpsf-style-css" media="all" rel="stylesheet"/>
 <link href="https://talk-to-psychic-free.com/wp-content/themes/talk-to-psychic-freecom-theme/css/start-dialog.css?ver=1791388073" id="ttpsf-start-dialog-css" media="all" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" id="ttpsf-google-fonts-css" media="all" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" id="ttpsf-material-symbols-css" media="all" rel="stylesheet"/>
-<link href="https://talk-to-psychic-free.com/wp-json/" rel="https://api.w.org/"/><link href="https://talk-to-psychic-free.com/wp-json/wp/v2/pages/5" rel="alternate" title="JSON" type="application/json"/><link href="https://talk-to-psychic-free.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
-<meta content="WordPress 7.1.3" name="generator"/>
-<link href="https://talk-to-psychic-free.com/" rel="shortlink"/>
+<meta content="WordPress 7.1.4" name="generator"/>
+<link href="https://talk-to-psychic-free.com/" rel="canonical"/>
 <link href="https://talk-to-psychic-free.com/wp-content/uploads/2026/03/site_31_favicon.png" rel="icon" sizes="32x32"/>
 <link href="https://talk-to-psychic-free.com/wp-content/uploads/2026/03/site_31_favicon.png" rel="icon" sizes="192x192"/>
 <link href="https://talk-to-psychic-free.com/wp-content/uploads/2026/03/site_31_favicon.png" rel="apple-touch-icon"/>
@@ -367,11 +257,11 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 @media(max-width:600px){body.wp-theme-talk-to-psychic-freecom-theme .wp-element-button,body.wp-theme-talk-to-psychic-freecom-theme .wp-block-button__link{width:100%;text-align:center;display:block}body.wp-theme-talk-to-psychic-freecom-theme .wp-block-cover{min-height:450px}}
 @media(prefers-reduced-motion:reduce){body.wp-theme-talk-to-psychic-freecom-theme *{transition-duration:0.01ms!important}}
 </style>
+<!-- i18n hreflang (WP-Net-Control) -->
 <link href="https://talk-to-psychic-free.com/" hreflang="en" rel="alternate"/>
 <link href="https://pl.talk-to-psychic-free.com/" hreflang="pl" rel="alternate"/>
 <link href="https://talk-to-psychic-free.com/" hreflang="x-default" rel="alternate"/>
-<link href="https://talk-to-psychic-free.com/" rel="canonical"/>
-</meta></link></meta></head>
+</head>
 <body class="home wp-singular page-template-default page page-id-5 wp-custom-logo wp-embed-responsive wp-theme-talk-to-psychic-freecom-theme bg-background text-on-surface font-body selection:bg-primary-container selection:text-primary dark singular">
 <div class="site min-h-screen flex flex-col" id="page">
 <a class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2 focus:rounded-xl" href="#primary">Skip to content</a>
@@ -383,7 +273,7 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 <a aria-current="page" class="custom-logo-link" href="https://talk-to-psychic-free.com/" rel="home"><img alt="Talk to Psychic Free" class="custom-logo" decoding="async" src="https://talk-to-psychic-free.com/wp-content/uploads/2026/03/talk-to-psychic-free-logo.png"/></a> </div>
 <!-- Desktop Navigation -->
 <nav class="hidden lg:block" id="site-navigation">
-<ul class="flex items-center gap-8"><li><a class="text-secondary border-b-2 border-secondary pb-1 font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/">Home</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/how-it-works/">How It Works</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/blog/">Blog</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/about/">About</a></li></ul> </nav>
+<ul class="flex items-center gap-8"><li><a class="text-secondary border-b-2 border-secondary pb-1 font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/">Home</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/how-it-works/">How It Works</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/blog/">Blog</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/about/">About</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/callback-line/">Callback</a></li></ul> </nav>
 <!-- Right Side: CTA + Account + Mobile Toggle -->
 <div class="flex items-center gap-4">
 <a class="ttpsf-cta-btn ttpsf-cta-gradient hidden sm:inline-flex bg-gradient-to-r from-primary-container to-on-primary-fixed-variant px-6 py-2.5 rounded-xl font-semibold hover:opacity-90 active:scale-95 transition-all" href="/go/" rel="nofollow sponsored">
@@ -399,7 +289,7 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 </div>
 <!-- Mobile Menu Dropdown -->
 <div class="hidden lg:hidden bg-surface-container-low/95 backdrop-blur-xl border-t border-outline-variant/10 px-8 py-6" id="ttpsf-mobile-menu">
-<ul class="flex flex-col gap-4"><li><a class="text-secondary border-b-2 border-secondary pb-1 font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/">Home</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/how-it-works/">How It Works</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/blog/">Blog</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/about/">About</a></li></ul> <a class="ttpsf-cta-btn ttpsf-cta-gradient mt-4 block text-center bg-gradient-to-r from-primary-container to-on-primary-fixed-variant px-6 py-3 rounded-xl font-semibold" href="/go/" rel="nofollow sponsored">
+<ul class="flex flex-col gap-4"><li><a class="text-secondary border-b-2 border-secondary pb-1 font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/">Home</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/how-it-works/">How It Works</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/blog/">Blog</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/about/">About</a></li><li><a class="text-on-surface hover:text-primary transition-colors font-headline font-bold tracking-tight" href="https://talk-to-psychic-free.com/callback-line/">Callback</a></li></ul> <a class="ttpsf-cta-btn ttpsf-cta-gradient mt-4 block text-center bg-gradient-to-r from-primary-container to-on-primary-fixed-variant px-6 py-3 rounded-xl font-semibold" href="/go/" rel="nofollow sponsored">
                 Start Free Chat            </a>
 </div>
 </header>
@@ -475,10 +365,6 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 <div class="px-2">
 <div class="flex justify-between items-start mb-2">
 <h3 class="text-xl font-headline font-bold">Advisor Sarah</h3>
-<div class="flex items-center text-secondary gap-1">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="text-sm font-bold">4.9</span>
-</div>
 </div>
 <p class="text-tertiary text-xs font-bold uppercase tracking-widest mb-4">Tarot - Love Expert</p>
 <span class="block w-full py-3 bg-surface-container-highest rounded-xl text-on-surface font-bold group-hover:bg-secondary group-hover:text-on-secondary transition-all text-center">View Profile</span>
@@ -495,10 +381,6 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 <div class="px-2">
 <div class="flex justify-between items-start mb-2">
 <h3 class="text-xl font-headline font-bold">Advisor Marcus</h3>
-<div class="flex items-center text-secondary gap-1">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="text-sm font-bold">5.0</span>
-</div>
 </div>
 <p class="text-tertiary text-xs font-bold uppercase tracking-widest mb-4">Astrology - Finance</p>
 <span class="block w-full py-3 bg-surface-container-highest rounded-xl text-on-surface font-bold group-hover:bg-secondary group-hover:text-on-secondary transition-all text-center">View Profile</span>
@@ -515,10 +397,6 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 <div class="px-2">
 <div class="flex justify-between items-start mb-2">
 <h3 class="text-xl font-headline font-bold">Advisor Elena</h3>
-<div class="flex items-center text-secondary gap-1">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="text-sm font-bold">4.8</span>
-</div>
 </div>
 <p class="text-tertiary text-xs font-bold uppercase tracking-widest mb-4">Medium - Spirit Guide</p>
 <span class="block w-full py-3 border border-outline-variant/30 text-on-surface-variant/60 rounded-xl font-bold text-center">View Profile</span>
@@ -535,10 +413,6 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 <div class="px-2">
 <div class="flex justify-between items-start mb-2">
 <h3 class="text-xl font-headline font-bold">Advisor Julian</h3>
-<div class="flex items-center text-secondary gap-1">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="text-sm font-bold">4.9</span>
-</div>
 </div>
 <p class="text-tertiary text-xs font-bold uppercase tracking-widest mb-4">Palmistry - Past Life</p>
 <span class="block w-full py-3 bg-surface-container-highest rounded-xl text-on-surface font-bold group-hover:bg-secondary group-hover:text-on-secondary transition-all text-center">View Profile</span>
@@ -600,6 +474,18 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 </div>
 </div>
 </section>
+<!-- Callback Line -->
+<section class="py-16 px-6" id="callback-line-strip">
+<div class="max-w-5xl mx-auto rounded-[2rem] border border-secondary/25 bg-gradient-to-br from-surface-container to-surface-container-lowest p-8 md:p-12 flex flex-col md:flex-row gap-8 md:items-center">
+<span class="material-symbols-outlined text-secondary shrink-0" style="font-size:64px">phone_callback</span>
+<div class="flex-1 min-w-0">
+<p class="text-tertiary text-xs font-bold uppercase tracking-[0.25em] mb-2">AI Callback Line</p>
+<h2 class="text-3xl font-headline font-bold mb-3">Can’t talk right now? Leave a message.</h2>
+<p class="text-on-surface-variant leading-relaxed">Pick an advisor, say what is on your mind, and hear an AI-generated voicemail reply with live captions and three notes to keep. For reflection and entertainment.</p>
+</div>
+<a class="shrink-0 px-8 py-4 rounded-2xl bg-secondary text-on-secondary font-bold text-lg text-center hover:scale-105 transition-transform" data-nebula-preserve="1" href="https://talk-to-psychic-free.com/callback-line/">Leave a Message</a>
+</div>
+</section>
 <!-- Final CTA -->
 <section class="py-24 px-6">
 <div class="max-w-4xl mx-auto rounded-[3rem] bg-gradient-to-br from-primary-container to-surface-container-lowest p-12 text-center border border-primary/10 relative overflow-hidden">
@@ -615,7 +501,7 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 </main>
 </div><!-- #content -->
 <!-- Footer -->
-<footer class="bg-surface-container-lowest pt-20 pb-28 md:pb-12 px-6 lg:px-20" id="colophon"><div class="lang-switcher" style="text-align:center;padding:12px 0;font-size:14px;opacity:.85">🌐 <strong style="color:inherit">EN</strong> · <a href="https://pl.talk-to-psychic-free.com/" style="color:inherit;text-decoration:underline">PL</a></div>
+<footer class="bg-surface-container-lowest pt-20 pb-28 md:pb-12 px-6 lg:px-20" id="colophon">
 <div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 <!-- Brand Column -->
 <div class="col-span-1">
@@ -631,6 +517,8 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 <ul class="space-y-4">
 <li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="https://talk-to-psychic-free.com/">Home</a></li>
 <li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="https://talk-to-psychic-free.com/how-it-works/">How It Works</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" data-nebula-preserve="1" href="https://talk-to-psychic-free.com/callback-line/">Callback Line</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="https://talk-to-psychic-free.com/our-psychics/">Our Psychics</a></li>
 <li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="https://talk-to-psychic-free.com/blog/">Blog</a></li>
 <li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="https://talk-to-psychic-free.com/contact/">Contact</a></li>
 </ul>
@@ -669,7 +557,7 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://talk-to-psychic-free.com/privacy-policy/">Privacy Policy</a>
 </div>
 </div>
-</footer>
+<!-- i18n switcher (WP-Net-Control) --><div class="lang-switcher" style="text-align:center;padding:12px 0;font-size:14px;opacity:.85">🌐 <strong style="color:inherit">EN</strong> · <a href="https://pl.talk-to-psychic-free.com/" style="color:inherit;text-decoration:underline">PL</a></div></footer>
 <!-- Mobile Bottom Nav Bar -->
 <nav class="md:hidden fixed bottom-0 w-full h-20 bg-[#151120]/90 backdrop-blur-xl rounded-t-[2rem] z-50 border-t border-[#e7dff5]/15 flex justify-around items-center px-6 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
 <a class="flex flex-col items-center justify-center text-[#a8c9f6] opacity-70 hover:opacity-100 transition-opacity" href="https://talk-to-psychic-free.com/">
@@ -690,48 +578,26 @@ body.wp-theme-talk-to-psychic-freecom-theme .ttp-gold-divider{height:2px;backgro
 </a>
 </nav>
 <dialog aria-describedby="ttpsf-start-description" aria-labelledby="ttpsf-start-title" class="ttpsf-start-dialog" data-nebula-preserve="1" id="ttpsf-start-dialog">
-<form class="ttpsf-start-form" id="ttpsf-start-form">
-<button aria-label="Close" class="ttpsf-start-close" data-ttpsf-close="" type="button">×</button>
-<p class="ttpsf-start-eyebrow">START YOUR FREE CHAT</p>
-<h2 id="ttpsf-start-title">Let’s get to know you</h2>
-<p id="ttpsf-start-description">One quick step before your free chat.</p>
-<label for="ttpsf-start-name">Your name</label>
-<input autocomplete="given-name" id="ttpsf-start-name" maxlength="80" name="first_name" placeholder="Enter your name" required="" type="text"/>
-<label class="ttpsf-start-check" for="ttpsf-start-quiz">
-<input id="ttpsf-start-quiz" name="quiz_ok" required="" type="checkbox"/>
-<span>Are you happy to take a short quiz before starting?</span>
-</label>
-<button class="ttpsf-start-submit" type="submit">Continue to quiz</button>
-</form>
+<div class="nebula-cta-wrap"><a class="ttpsf-start-close" data-nebula-cta="1" href="/go/" rel="nofollow sponsored">×</a></div>
 </dialog>
 </div><!-- #page -->
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/talk-to-psychic-freecom-theme/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 <script>
-
     document.addEventListener('DOMContentLoaded', function() {
-
         var toggle = document.getElementById('ttpsf-mobile-toggle');
-
         var menu = document.getElementById('ttpsf-mobile-menu');
-
         if (toggle && menu) {
-
             toggle.addEventListener('click', function() {
-
                 menu.classList.toggle('hidden');
-
             });
-
         }
-
     });
-
     </script>
 <script id="ttpsf-start-dialog-js" src="https://talk-to-psychic-free.com/wp-content/themes/talk-to-psychic-freecom-theme/js/start-dialog.js?ver=1791388433"></script>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://talk-to-psychic-free.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.3"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://talk-to-psychic-free.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */
