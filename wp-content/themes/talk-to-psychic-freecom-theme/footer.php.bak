@@ -1,0 +1,57 @@
+<?php
+/**
+ * Footer template
+ *
+ * @package talk-to-psychic-freecom-theme
+ */
+?>
+    </div><!-- #content -->
+
+    <footer id="colophon" class="site-footer footer">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div class="footer-widgets" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-bottom:40px;text-align:left;">
+                <div class="footer-widget-area">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="<?php echo esc_url( home_url( '/talk-to-psychic/' ) ); ?>">Talk to a Psychic</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/free-psychic-chat/' ) ); ?>">Free Psychic Chat</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/love-readings/' ) ); ?>">Love Readings</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/tarot-readings/' ) ); ?>">Tarot Readings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget-area">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/how-it-works/' ) ); ?>">How It Works</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About Us</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">FAQ</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget-area">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">Privacy Policy</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/terms/' ) ); ?>">Terms of Service</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/disclaimer/' ) ); ?>">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-brand"><?php bloginfo( 'name' ); ?></div>
+
+            <div class="site-info" style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);">
+                &copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.
+            </div>
+        </div>
+
+        <!-- Back to top -->
+        <a href="#page" class="back-to-top" style="position:fixed;bottom:30px;right:30px;background:var(--color-primary);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:var(--shadow-md);transition:var(--transition);opacity:0.8;z-index:99;" aria-label="Back to top">&#8679;</a>
+    </footer>
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+</body>
+</html>
